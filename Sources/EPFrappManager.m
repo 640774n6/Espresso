@@ -136,6 +136,13 @@
                 if(identifier)
                 { [frappMerchant setIdentifier: identifier]; }
                 
+                NSString *imagePath = [frappBundle pathForResource: @"AppIcon" ofType: @"png"];
+                if(imagePath)
+                {
+                    NSURL *imageURL = [NSURL fileURLWithPath: imagePath];
+                    [frappMerchant setIconURL: imageURL];
+                }
+                
                 NSNumber *preferredOrder = [frappBundleInfoDict objectForKey: @"FRAppliancePreferedOrderValue"];
                 if(preferredOrder)
                 { [frappMerchant setPreferredOrder: [preferredOrder floatValue]]; }
