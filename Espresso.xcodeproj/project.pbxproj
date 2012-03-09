@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C126FA9A12C29520006C6614 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C126FA9912C29520006C6614 /* libsubstrate.dylib */; };
+		C14D7DA21508B60800E00499 /* EPFrappManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C14D7DA11508B60800E00499 /* EPFrappManager.m */; };
+		C14D7DD7150900BC00E00499 /* EPFrappMerchant.m in Sources */ = {isa = PBXBuildFile; fileRef = C14D7DD6150900BC00E00499 /* EPFrappMerchant.m */; };
+		C14D7DDA150901FA00E00499 /* EPFrappMerchantInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C14D7DD9150901FA00E00499 /* EPFrappMerchantInfo.m */; };
+		C1A3955D12BFECD600768E01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A3955C12BFECD600768E01 /* Foundation.framework */; };
+		C1A3956112BFECDE00768E01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A3956012BFECDE00768E01 /* QuartzCore.framework */; };
+		C1A3957512BFEDC200768E01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A3957412BFEDC200768E01 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8D5B49B6048680CD000E48DA /* Espresso.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Espresso.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		C126FA9812C29520006C6614 /* substrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = substrate.h; sourceTree = "<group>"; };
+		C126FA9912C29520006C6614 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsubstrate.dylib; sourceTree = "<group>"; };
+		C14D7D931508AAF500E00499 /* AppleTV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleTV.h; sourceTree = "<group>"; };
+		C14D7DA01508B60700E00499 /* EPFrappManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPFrappManager.h; sourceTree = "<group>"; };
+		C14D7DA11508B60800E00499 /* EPFrappManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPFrappManager.m; sourceTree = "<group>"; };
+		C14D7DD5150900BC00E00499 /* EPFrappMerchant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPFrappMerchant.h; sourceTree = "<group>"; };
+		C14D7DD6150900BC00E00499 /* EPFrappMerchant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPFrappMerchant.m; sourceTree = "<group>"; };
+		C14D7DD8150901F900E00499 /* EPFrappMerchantInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPFrappMerchantInfo.h; sourceTree = "<group>"; };
+		C14D7DD9150901FA00E00499 /* EPFrappMerchantInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPFrappMerchantInfo.m; sourceTree = "<group>"; };
+		C1A3954712BFECB700768E01 /* keysym.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keysym.h; sourceTree = "<group>"; };
+		C1A3954812BFECB700768E01 /* rfb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfb.h; sourceTree = "<group>"; };
+		C1A3954912BFECB700768E01 /* rfbclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfbclient.h; sourceTree = "<group>"; };
+		C1A3954A12BFECB700768E01 /* rfbconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfbconfig.h; sourceTree = "<group>"; };
+		C1A3954B12BFECB700768E01 /* rfbint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfbint.h; sourceTree = "<group>"; };
+		C1A3954C12BFECB700768E01 /* rfbproto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfbproto.h; sourceTree = "<group>"; };
+		C1A3954D12BFECB700768E01 /* rfbregion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfbregion.h; sourceTree = "<group>"; };
+		C1A3954E12BFECB700768E01 /* libvncserver.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvncserver.a; sourceTree = "<group>"; };
+		C1A3955112BFECB700768E01 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1A3955712BFECB700768E01 /* Espresso.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Espresso.pch; sourceTree = "<group>"; };
+		C1A3955C12BFECD600768E01 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C1A3956012BFECDE00768E01 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C1A3956812BFED0300768E01 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/PrivateFrameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		C1A3957412BFEDC200768E01 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C1DB26C612FAAC720023FAEE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1A3955D12BFECD600768E01 /* Foundation.framework in Frameworks */,
+				C1A3956112BFECDE00768E01 /* QuartzCore.framework in Frameworks */,
+				C126FA9A12C29520006C6614 /* libsubstrate.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* Espresso */ = {
+			isa = PBXGroup;
+			children = (
+				C1A3955212BFECB700768E01 /* Sources */,
+				C1A3954412BFECB700768E01 /* Libraries */,
+				C1A3954F12BFECB700768E01 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = Espresso;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1A3955C12BFECD600768E01 /* Foundation.framework */,
+				C1A3956012BFECDE00768E01 /* QuartzCore.framework */,
+				C1A3956812BFED0300768E01 /* IOSurface.framework */,
+				C1DB26C612FAAC720023FAEE /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* Espresso.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C126FA9612C29520006C6614 /* libsubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				C126FA9712C29520006C6614 /* Headers */,
+				C126FA9912C29520006C6614 /* libsubstrate.dylib */,
+			);
+			path = libsubstrate;
+			sourceTree = "<group>";
+		};
+		C126FA9712C29520006C6614 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C126FA9812C29520006C6614 /* substrate.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		C1A3954412BFECB700768E01 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C126FA9612C29520006C6614 /* libsubstrate */,
+				C1A3954512BFECB700768E01 /* libvncserver */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		C1A3954512BFECB700768E01 /* libvncserver */ = {
+			isa = PBXGroup;
+			children = (
+				C1A3954612BFECB700768E01 /* Headers */,
+				C1A3954E12BFECB700768E01 /* libvncserver.a */,
+			);
+			path = libvncserver;
+			sourceTree = "<group>";
+		};
+		C1A3954612BFECB700768E01 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C1A3954712BFECB700768E01 /* keysym.h */,
+				C1A3954812BFECB700768E01 /* rfb.h */,
+				C1A3954912BFECB700768E01 /* rfbclient.h */,
+				C1A3954A12BFECB700768E01 /* rfbconfig.h */,
+				C1A3954B12BFECB700768E01 /* rfbint.h */,
+				C1A3954C12BFECB700768E01 /* rfbproto.h */,
+				C1A3954D12BFECB700768E01 /* rfbregion.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		C1A3954F12BFECB700768E01 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C1A3955012BFECB700768E01 /* Text */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C1A3955012BFECB700768E01 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				C1A3955112BFECB700768E01 /* Info.plist */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		C1A3955212BFECB700768E01 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C1A3957412BFEDC200768E01 /* main.m */,
+				C14D7DA01508B60700E00499 /* EPFrappManager.h */,
+				C14D7DA11508B60800E00499 /* EPFrappManager.m */,
+				C14D7DD5150900BC00E00499 /* EPFrappMerchant.h */,
+				C14D7DD6150900BC00E00499 /* EPFrappMerchant.m */,
+				C14D7DD8150901F900E00499 /* EPFrappMerchantInfo.h */,
+				C14D7DD9150901FA00E00499 /* EPFrappMerchantInfo.m */,
+				C1A3955512BFECB700768E01 /* Support */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C1A3955512BFECB700768E01 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C14D7D931508AAF500E00499 /* AppleTV.h */,
+				C1A3955712BFECB700768E01 /* Espresso.pch */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* Espresso */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Espresso" */;
+			buildPhases = (
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Espresso;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = Espresso;
+			productReference = 8D5B49B6048680CD000E48DA /* Espresso.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "Espresso" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* Espresso */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* Espresso */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1A3957512BFEDC200768E01 /* main.m in Sources */,
+				C14D7DA21508B60800E00499 /* EPFrappManager.m in Sources */,
+				C14D7DD7150900BC00E00499 /* EPFrappMerchant.m in Sources */,
+				C14D7DDA150901FA00E00499 /* EPFrappMerchantInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB913B08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Sources/Support/Espresso.pch;
+				INFOPLIST_FILE = Resources/Text/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/libsubstrate\"",
+				);
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = Espresso;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		1DEB913C08733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Sources/Support/Espresso.pch;
+				INFOPLIST_FILE = Resources/Text/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/libsubstrate\"",
+				);
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = Espresso;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		1DEB913F08733D840010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB914008733D840010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB913A08733D840010E9CD /* Build configuration list for PBXNativeTarget "Espresso" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913B08733D840010E9CD /* Debug */,
+				1DEB913C08733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "Espresso" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB913F08733D840010E9CD /* Debug */,
+				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
