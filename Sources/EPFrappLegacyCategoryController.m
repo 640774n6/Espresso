@@ -3,7 +3,7 @@
 //  Espresso
 //
 //  Created by Brandon Holland on 12-03-09.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 What a Nutbar Software. All rights reserved.
 //
 
 #import "EPFrappLegacyCategoryController.h"

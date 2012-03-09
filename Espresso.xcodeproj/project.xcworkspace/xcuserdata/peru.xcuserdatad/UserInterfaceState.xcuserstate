@@ -202,7 +202,7 @@
 		<string>IDEWorkspaceTabControllerUtilityAreaSplitView</string>
 		<string>IDEWorkspaceTabControllerDesignAreaSplitView</string>
 		<integer>0</integer>
-		<string>EPFrappManager.m</string>
+		<string>main.m</string>
 		<false/>
 		<dict>
 			<key>$class</key>
@@ -755,7 +755,7 @@
 				<integer>75</integer>
 			</dict>
 		</dict>
-		<string>EPFrappManager.m</string>
+		<string>main.m</string>
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -824,7 +824,7 @@
 				<integer>84</integer>
 			</dict>
 			<key>NS.string</key>
-			<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappManager.m</string>
+			<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/main.m</string>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -1086,7 +1086,7 @@
 		<string>FileDataType</string>
 		<string>DocumentURL</string>
 		<string>DocumentExtensionIdentifier</string>
-		<string>-_loadAppliances</string>
+		<string>merchantcoordinator_allMerchants_new()</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1222,9 +1222,9 @@
 		<string>PrimaryDocumentTimestamp</string>
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>352982327.14052498</real>
-		<string>{0, 687}</string>
-		<string>{5002, 0}</string>
+		<real>352983386.64923197</real>
+		<string>{0, 1159}</string>
+		<string>{719, 0}</string>
 		<string>public.objective-c-source</string>
 		<dict>
 			<key>$class</key>
@@ -1243,7 +1243,7 @@
 				<integer>125</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappManager.m</string>
+		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/main.m</string>
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -4216,7 +4216,7 @@
 				<integer>392</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/.DS_Store</string>
+		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/main.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4252,7 +4252,7 @@
 				<integer>396</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Espresso.xcodeproj/</string>
+		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappLegacyCategoryController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4270,7 +4270,7 @@
 				<integer>398</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappLegacyMerchant.h</string>
+		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappLegacyMerchant.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4288,7 +4288,7 @@
 				<integer>400</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/Support/AppleTV.h</string>
+		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappLegacyMerchant.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4306,7 +4306,7 @@
 				<integer>402</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappMerchantInfo.m</string>
+		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappLegacyCategoryController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4324,7 +4324,7 @@
 				<integer>404</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappLegacyMerchant.m</string>
+		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/.DS_Store</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4342,7 +4342,7 @@
 				<integer>406</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappLegacyCategoryController.m</string>
+		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Espresso.xcodeproj/</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4360,7 +4360,7 @@
 				<integer>408</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappLegacyCategoryController.h</string>
+		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/Support/AppleTV.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4378,7 +4378,7 @@
 				<integer>410</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/main.m</string>
+		<string>file://localhost/Volumes/Projects/What%20a%20Nutbar/Apple%20TV/ATV2/Espresso/Sources/EPFrappMerchantInfo.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5325,19 +5325,19 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>306</integer>
+					<integer>116</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>305</integer>
+					<integer>117</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>307</integer>
+					<integer>118</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>308</integer>
+					<integer>119</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -5360,9 +5360,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>352977461.086097</real>
-		<string>{192, 1240}</string>
-		<string>{1129, 0}</string>
+		<real>352983386.63308001</real>
+		<string>{0, 1159}</string>
+		<string>{719, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5456,9 +5456,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>352981067.93821502</real>
-		<string>{0, 684}</string>
-		<string>{1270, 0}</string>
+		<real>352983120.70438999</real>
+		<string>{0, 689}</string>
+		<string>{277, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5648,9 +5648,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>352982326.93364102</real>
+		<real>352983122.70711499</real>
 		<string>{0, 687}</string>
-		<string>{5002, 0}</string>
+		<string>{324, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5696,7 +5696,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>352981117.89499098</real>
+		<real>352982650.02544999</real>
 		<string>{809, 962}</string>
 		<string>{923, 0}</string>
 		<dict>
@@ -5709,19 +5709,19 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>306</integer>
+					<integer>116</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>305</integer>
+					<integer>117</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>307</integer>
+					<integer>118</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>308</integer>
+					<integer>119</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -5744,9 +5744,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>352978653.33621299</real>
-		<string>{0, 466}</string>
-		<string>{353, 0}</string>
+		<real>352982647.09808898</real>
+		<string>{0, 471}</string>
+		<string>{120, 22}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5792,7 +5792,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>352981831.49588299</real>
+		<real>352982648.49138099</real>
 		<string>{0, 693}</string>
 		<string>{422, 0}</string>
 		<dict>
@@ -6124,7 +6124,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>396</integer>
+				<integer>406</integer>
 			</dict>
 			<key>selection</key>
 			<dict>
@@ -6621,7 +6621,7 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>392</integer>
+				<integer>404</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -6665,11 +6665,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>595</integer>
+					<integer>549</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>596</integer>
+					<integer>595</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -6680,7 +6680,6 @@
 		<string>IDEActivityReportTitle</string>
 		<string>IDEActivityReportCompletionSummaryStringSegments</string>
 		<string>IDEActivityReportOptions</string>
-		<string>Build</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6691,7 +6690,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>597</integer>
+					<integer>596</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -6717,19 +6716,23 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
+					<integer>597</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>599</integer>
 				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
 				<dict>
 					<key>CF$UID</key>
 					<integer>600</integer>
 				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
 				<dict>
 					<key>CF$UID</key>
 					<integer>601</integer>
@@ -6738,10 +6741,6 @@
 					<key>CF$UID</key>
 					<integer>602</integer>
 				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>595</integer>
-				</dict>
 			</array>
 		</dict>
 		<string>IDEActivityReportStringSegmentBackSeparator</string>
@@ -6749,6 +6748,7 @@
 		<string>IDEActivityReportStringSegmentStringValue</string>
 		<string> </string>
 		<real>2</real>
+		<string>Build</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6759,15 +6759,15 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
+					<integer>597</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>599</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>600</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -6799,15 +6799,15 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
+					<integer>597</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>599</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>600</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -6864,7 +6864,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>600</integer>
+					<integer>599</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -6872,7 +6872,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>599</integer>
+					<integer>598</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -6919,7 +6919,7 @@
 		<string>IDEActivityReportStringSegmentType</string>
 		<string>IDEActivityReportStringSegmentTimeStyle</string>
 		<string>IDEActivityReportStringSegmentDate</string>
-		<string>Today at 2:35 AM</string>
+		<string>Today at 2:55 AM</string>
 		<real>3</real>
 		<dict>
 			<key>$class</key>
@@ -6928,7 +6928,7 @@
 				<integer>619</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>352982153.11009502</real>
+			<real>352983355.09508502</real>
 		</dict>
 		<dict>
 			<key>$classes</key>

@@ -9,6 +9,8 @@
 #import "substrate.h"
 #import "EPFrappManager.h"
 
+#define kEspressoCurrentVersion                 @"0.2(turbo-manatee)"
+
 static IMP merchantcoordinator_allMerchants_old;
 id merchantcoordinator_allMerchants_new(id self, SEL cmd)
 {
@@ -28,6 +30,8 @@ MSInitialize
 {
     NSAutoreleasePool *localPool = [[NSAutoreleasePool alloc] init];
 	
+    NSLog(@"Espresso -> <version %@> loaded", kEspressoCurrentVersion);
+    
     NSLog(@"Espresso -> loading frappuccinos...");
     [[EPFrappManager sharedFrappManager] loadFrappuccinos];
     

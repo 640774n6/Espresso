@@ -3,15 +3,17 @@ What:		The title pretty much says it all.
 Why:		So you can load your own custom plugins
 Who:		Brandon Holland (bholland@brandon-holland.com)
 Where:		http://brandon-holland.com
+Version:	0.2(turbo-manatee)
 
 More:
 Espresso searches and loads plugins called "Frappuccinos" from the 
 AppleTV.app/Frappuccinos folder. You'll have to create this folder.
 
-Espresso does not load an frappliance as most Apple TV Developers would 
-be  accustomed to, instead it loads frappuccinos. A Frappuccino is an NSBundle 
-with the frappuccino file extension. It contains a binary (containing the plugin code), 
-an Info.plist, and resources. 
+Espresso is now able to load frappliances just like in the good old days and
+it will do the heavy lifting to get your legacy plugin into the new menu system.
+
+Frappuccinos are NSBundles with the frappuccino file extension. It contains a
+binary (containing the plugin code), an Info.plist, and resources. 
 
 The principal class of a Frappuccino should be a subclass of BRController that you create. 
 This will be the controller that gets displayed when your app button gets selected on the main menu.
