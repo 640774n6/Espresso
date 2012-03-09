@@ -5,13 +5,21 @@ Who:		Brandon Holland (bholland@brandon-holland.com)
 Where:		http://brandon-holland.com
 
 More:
-Espresso searches and loads plugins called "Frappuccinos" from the AppleTV.app/Frappuccinos folder. You'll have to create this folder.
+Espresso searches and loads plugins called "Frappuccinos" from the 
+AppleTV.app/Frappuccinos folder. You'll have to create this folder.
 
-Espresso does not load an frappliance as most Apple TV Developers would be  accustomed to, instead it loads frappuccinos. A Frappuccino is an NSBundle with the frappuccino file extension. It contains a binary (containing the plugin code), an Info.plist, and resources. 
+Espresso does not load an frappliance as most Apple TV Developers would 
+be  accustomed to, instead it loads frappuccinos. A Frappuccino is an NSBundle 
+with the frappuccino file extension. It contains a binary (containing the plugin code), 
+an Info.plist, and resources. 
 
-The principal class of a Frappuccino should be a subclass of BRController that you create. This will be the controller that gets displayed when your app button gets selected on the main menu.
+The principal class of a Frappuccino should be a subclass of BRController that you create. 
+This will be the controller that gets displayed when your app button gets selected on the main menu.
 
-There are some custom keys that should be added to each Frappuccinos Info.plist. These keys are used to define the appearance of the app button in the main menu. The keys are:
+There are some custom keys that should be added to each Frappuccinos Info.plist. 
+These keys are used to define the appearance of the app button in the main menu. 
+
+The keys are:
 
 EPFrappuccino 			(dct)	Dictionary containing all other keys + values
 EPFrappuccinoIdentifier		(str) 	Unique identifier for plugin
@@ -19,7 +27,9 @@ EPFrappuccinoTitle		(str)	Display title for icon on main menu
 EPFrappuccinoImageName 		(str)  	Image name (including extension) for icon within plugin bundle
 EPFrappuccinoPreferredOrder 	(num)	Used to determine placement of your icon on the main menu
 
-Espresso is not meant as a replacement for DHowett's beigelist. Instead exists as a collection of ideas, research, and solutions in the form of an implementation. Hopefully the work here can be leveraged somehow. Use at your own risk.
+Espresso is not meant as a replacement for DHowett's beigelist. Instead exists as a collection 
+of ideas, research, and solutions in the form of an implementation. Hopefully the work here can be 
+leveraged somehow. Use at your own risk.
 
 
 
