@@ -1,5 +1,5 @@
 //
-//  EPFrappMerchant.h
+//  EPFrappLegacyMerchant.h
 //  Espresso
 //
 //  Created by Brandon Holland on 12-03-08.
@@ -8,15 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EPFrappMerchant: ATVMerchant 
+@interface EPFrappLegacyMerchant: ATVMerchant 
 {
     int padding[32];
-    Class _rootControllerClass;
     Class _legacyApplianceClass;
 }
 + (id) merchant;
-- (Class) rootControllerClass;
-- (void) setRootControllerClass: (Class) rootControllerClass;
 - (Class) legacyApplianceClass;
 - (void) setLegacyApplianceClass: (Class) legacyApplianceClass;
 - (NSString *) title;

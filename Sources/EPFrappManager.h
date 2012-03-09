@@ -17,7 +17,9 @@
 @interface EPFrappManager: NSObject 
 {    
     NSMutableArray *_frappuccinos;
+    NSMutableArray *_appliances;
     BOOL _frappuccinosLoaded;
+    BOOL _appliancesLoaded;
 }
 + (id) sharedFrappManager;
 - (NSArray *) frappuccinos;
@@ -25,4 +27,9 @@
 - (void) clearFrappuccinos;
 - (void) reloadFrappuccinos;
 - (void) loadFrappuccinos;
+- (NSArray *) appliances;
+- (BOOL) appliancesLoaded;
+- (void) clearAppliances;
+- (void) reloadAppliances;
+- (void) loadAppliances;
 @end

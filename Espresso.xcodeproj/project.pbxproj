@@ -11,6 +11,8 @@
 		C14D7DA21508B60800E00499 /* EPFrappManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C14D7DA11508B60800E00499 /* EPFrappManager.m */; };
 		C14D7DD7150900BC00E00499 /* EPFrappMerchant.m in Sources */ = {isa = PBXBuildFile; fileRef = C14D7DD6150900BC00E00499 /* EPFrappMerchant.m */; };
 		C14D7DDA150901FA00E00499 /* EPFrappMerchantInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C14D7DD9150901FA00E00499 /* EPFrappMerchantInfo.m */; };
+		C195CF241509EFD500A3C9B2 /* EPFrappLegacyMerchant.m in Sources */ = {isa = PBXBuildFile; fileRef = C195CF231509EFD500A3C9B2 /* EPFrappLegacyMerchant.m */; };
+		C195CF271509F0F600A3C9B2 /* EPFrappLegacyCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = C195CF261509F0F600A3C9B2 /* EPFrappLegacyCategoryController.m */; };
 		C1A3955D12BFECD600768E01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A3955C12BFECD600768E01 /* Foundation.framework */; };
 		C1A3956112BFECDE00768E01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A3956012BFECDE00768E01 /* QuartzCore.framework */; };
 		C1A3957512BFEDC200768E01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A3957412BFEDC200768E01 /* main.m */; };
@@ -27,6 +29,10 @@
 		C14D7DD6150900BC00E00499 /* EPFrappMerchant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPFrappMerchant.m; sourceTree = "<group>"; };
 		C14D7DD8150901F900E00499 /* EPFrappMerchantInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPFrappMerchantInfo.h; sourceTree = "<group>"; };
 		C14D7DD9150901FA00E00499 /* EPFrappMerchantInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPFrappMerchantInfo.m; sourceTree = "<group>"; };
+		C195CF221509EFD500A3C9B2 /* EPFrappLegacyMerchant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPFrappLegacyMerchant.h; sourceTree = "<group>"; };
+		C195CF231509EFD500A3C9B2 /* EPFrappLegacyMerchant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPFrappLegacyMerchant.m; sourceTree = "<group>"; };
+		C195CF251509F0F600A3C9B2 /* EPFrappLegacyCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPFrappLegacyCategoryController.h; sourceTree = "<group>"; };
+		C195CF261509F0F600A3C9B2 /* EPFrappLegacyCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPFrappLegacyCategoryController.m; sourceTree = "<group>"; };
 		C1A3954712BFECB700768E01 /* keysym.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keysym.h; sourceTree = "<group>"; };
 		C1A3954812BFECB700768E01 /* rfb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfb.h; sourceTree = "<group>"; };
 		C1A3954912BFECB700768E01 /* rfbclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfbclient.h; sourceTree = "<group>"; };
@@ -162,8 +168,12 @@
 				C14D7DA11508B60800E00499 /* EPFrappManager.m */,
 				C14D7DD5150900BC00E00499 /* EPFrappMerchant.h */,
 				C14D7DD6150900BC00E00499 /* EPFrappMerchant.m */,
+				C195CF221509EFD500A3C9B2 /* EPFrappLegacyMerchant.h */,
+				C195CF231509EFD500A3C9B2 /* EPFrappLegacyMerchant.m */,
 				C14D7DD8150901F900E00499 /* EPFrappMerchantInfo.h */,
 				C14D7DD9150901FA00E00499 /* EPFrappMerchantInfo.m */,
+				C195CF251509F0F600A3C9B2 /* EPFrappLegacyCategoryController.h */,
+				C195CF261509F0F600A3C9B2 /* EPFrappLegacyCategoryController.m */,
 				C1A3955512BFECB700768E01 /* Support */,
 			);
 			path = Sources;
@@ -231,6 +241,8 @@
 				C14D7DA21508B60800E00499 /* EPFrappManager.m in Sources */,
 				C14D7DD7150900BC00E00499 /* EPFrappMerchant.m in Sources */,
 				C14D7DDA150901FA00E00499 /* EPFrappMerchantInfo.m in Sources */,
+				C195CF241509EFD500A3C9B2 /* EPFrappLegacyMerchant.m in Sources */,
+				C195CF271509F0F600A3C9B2 /* EPFrappLegacyCategoryController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

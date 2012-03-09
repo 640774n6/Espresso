@@ -1,15 +1,16 @@
 //
-//  EPFrappMerchant.m
+//  EPFrappLegacyMerchant.m
 //  Espresso
 //
 //  Created by Brandon Holland on 12-03-08.
 //  Copyright 2012 What a Nutbar Software. All rights reserved.
 //
 
-#import "EPFrappMerchant.h"
+#import "EPFrappLegacyMerchant.h"
 #import "EPFrappMerchantInfo.h"
+#import "EPFrappLegacyCategoryController.h"
 
-@implementation EPFrappMerchant
+@implementation EPFrappLegacyMerchant
 
 #pragma mark -
 #pragma mark Creation + Destruction
@@ -22,7 +23,6 @@
         EPFrappMerchantInfo *info = [EPFrappMerchantInfo merchantInfo];
         [self setInfo: info];
         
-        _rootControllerClass = nil;
         _legacyApplianceClass = nil;
         [self setEnabled: YES];
     }
@@ -39,7 +39,7 @@
 #pragma mark
 
 + (id) merchant
-{ return [[[EPFrappMerchant alloc] init] autorelease]; }
+{ return [[[EPFrappLegacyMerchant alloc] init] autorelease]; }
 
 #pragma mark -
 #pragma mark Private Methods
@@ -49,23 +49,22 @@
 #pragma mark Public Methods
 #pragma mark
 
-- (Class) rootControllerClass
-{ return _rootControllerClass; }
-
-- (void) setRootControllerClass: (Class) rootControllerClass
-{ _rootControllerClass = rootControllerClass; }
-
-- (BRController *) rootController
-{
-    BRController *controller = [[[_rootControllerClass alloc] init] autorelease];
-    return controller;
-}
-
 - (Class) legacyApplianceClass
 { return _legacyApplianceClass; }
 
 - (void) setLegacyApplianceClass: (Class) legacyApplianceClass
 { _legacyApplianceClass = legacyApplianceClass; }
+
+- (BRController *) rootController
+{
+    EPFrappLegacyCategoryController *controller = [[[EPFrappLegacyCategoryController alloc] init] autorelease];
+    [controller setListTitle: [self title]];
+    
+    BRBaseAppliance *legacyAppliance = [[[_legacyApplianceClass alloc] init] autorelease];
+    [controller setLegacyAppliance: legacyAppliance];
+    
+    return controller;
+}
 
 - (NSString *) title
 { return [[self info] menuTitle]; }

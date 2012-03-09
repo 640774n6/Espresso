@@ -22,6 +22,24 @@
 - (unsigned)retainCount;	// 0x303719ed
 @end
 
+@interface BRLocalizedStringManager: BRSingleton
++ (id)_backRowFramework;	// 0x3036bfb5
++ (id)accessibilityLocalizedStringForKey:(id)key;	// 0x3036bb4d
++ (id)appliance:(id)appliance localizedStringForKey:(id)key inFile:(id)file;	// 0x3036bbf1
++ (id)applicationLocalizedStringForKey:(id)key inFile:(id)file;	// 0x3036bbad
++ (id)backRowLocalizedStringForKey:(id)key inFile:(id)file;	// 0x3036bb81
++ (id)localizedLanguageForCode:(id)code;	// 0x3036bf25
++ (id)localizedStringForKey:(id)key inFile:(id)file fromBundle:(id)bundle;	// 0x3036bc85
++ (id)pathForResource:(id)resource ofType:(id)type forBundle:(id)bundle;	// 0x3036be9d
++ (void)setSingleton:(id)singleton;	// 0x3036b9c1
++ (id)singleton;	// 0x3036b9b1
+- (id)init;	// 0x3036b9d1
+- (id)_currentLanguageNameForBundle:(id)bundle;	// 0x3036c155
+- (id)_hashKeyForStringKey:(id)stringKey inFile:(id)file fromBundlePath:(id)bundlePath;	// 0x3036c221
+- (void)_languageChanged:(id)changed;	// 0x3036bfb9
+- (void)dealloc;	// 0x3036babd
+@end
+
 @interface BRImage : NSObject
 + (id)imageWithCGImageRef:(CGImageRef)cgimageRef;	// 0x3023cb7d
 + (id)imageWithData:(id)data;	// 0x3023cb39
@@ -78,6 +96,39 @@
 - (id)requiredRemoteMediaTypes;	// 0x30246209
 - (void)setInfo:(id)info;	// 0x30246301
 - (id)supportedMediaTypes;	// 0x302461e1
+@end
+
+@interface BRApplianceCategory: NSObject
++ (id)categoryWithName:(id)name identifier:(id)identifier preferredOrder:(float)order;	// 0x30245625
+- (id)init;	// 0x302456b1
+- (id)action;	// 0x302459e1
+- (void)dealloc;	// 0x30245715
+- (id)description;	// 0x30245761
+- (BOOL)followsStoreCateogry;	// 0x30245af1
+- (id)identifier;	// 0x30245991
+- (BOOL)isDefaultCategory;	// 0x30245929
+- (BOOL)isStoreCategory;	// 0x30245a5d
+- (BOOL)isStoreDependent;	// 0x30245b85
+- (id)name;	// 0x30245819
+- (float)preferredOrder;	// 0x30245895
+- (void)setAction:(id)action;	// 0x302459b9
+- (void)setFollowsStoreCategory:(BOOL)category;	// 0x30245a9d
+- (void)setIdentifier:(id)identifier;	// 0x30245969
+- (void)setIsDefaultCategory:(BOOL)category;	// 0x302458d5
+- (void)setIsStoreCategory:(BOOL)category;	// 0x30245a09
+- (void)setIsStoreDependent:(BOOL)dependent;	// 0x30245b31
+- (void)setName:(id)name;	// 0x302457f1
+- (void)setPreferredOrder:(float)order;	// 0x30245841
+- (void)setShouldDisplayOnStartup:(BOOL)displayOnStartup;	// 0x30245bc5
+- (void)setTextEntryHistoryDisplayBehaviors:(id)behaviors;	// 0x30245d6d
+- (void)setTextEntryHistoryDisplayClients:(id)clients;	// 0x30245d11
+- (void)setTextEntryHistoryStorageBehavior:(id)behavior;	// 0x30245cb5
+- (void)setTextEntryHistoryStorageClient:(id)client;	// 0x30245c59
+- (BOOL)shouldDisplayOnStartup;	// 0x30245c19
+- (id)textEntryHistoryDisplayBehaviors;	// 0x30245da1
+- (id)textEntryHistoryDisplayClients;	// 0x30245d45
+- (id)textEntryHistoryStorageBehavior;	// 0x30245ce9
+- (id)textEntryHistoryStorageClient;	// 0x30245c8d
 @end
 
 @interface BRBaseAppliance: NSObject <BRAppliance>
@@ -444,6 +495,51 @@
 - (void)windowMaxBoundsChanged;	// 0x3023b26d
 @end
 
+@interface BRControllerStack: BRControl
+- (id)init;	// 0x3024a7f5
+- (void)_addTransaction:(id)transaction;	// 0x3024b421
+- (id)_checkSubstitutions:(id)substitutions;	// 0x3024d07d
+- (void)_databaseObjectModified:(id)modified;	// 0x3024cedd
+- (void)_performDepthLimitedCullingForController:(id)controller;	// 0x3024cce5
+- (void)_processPopToClassTransaction:(id)classTransaction;	// 0x3024c379
+- (void)_processPopToLabelTransaction:(id)labelTransaction;	// 0x3024c455
+- (void)_processPopToTransaction:(id)transaction;	// 0x3024c165
+- (void)_processPopTransaction:(id)transaction;	// 0x3024bd41
+- (void)_processPushTransaction:(id)transaction;	// 0x3024bc09
+- (void)_processRemoveTransaction:(id)transaction;	// 0x3024c521
+- (void)_processReplaceAllTransaction:(id)transaction;	// 0x3024c831
+- (void)_processReplaceControllersAboveLabelTransaction:(id)transaction;	// 0x3024ca75
+- (void)_processSwapTransaction:(id)transaction;	// 0x3024bf21
+- (void)_processTransactions;	// 0x3024b46d
+- (void)_refreshControllersNotification:(id)notification;	// 0x3024cec9
+- (void)_setContent:(id)content direction:(int)direction oldTransition:(id)transition;	// 0x3024b669
+- (void)_updateControllerValidity:(id)validity;	// 0x3024cf91
+- (void)_updateControllersOnlyLegacy:(BOOL)legacy;	// 0x3024cd79
+- (void)_updateStackPathForPoppingController:(id)poppingController;	// 0x3024cff9
+- (void)_updateStackPathForPushingController:(id)pushingController;	// 0x3024cfa5
+- (id)accessibilityLabel;	// 0x3024b3f9
+- (BOOL)brEventAction:(id)action;	// 0x3024b219
+- (id)controllers;	// 0x3024b005
+- (id)controllersLabeled:(id)labeled;	// 0x3024b031
+- (id)controllersOfClass:(Class)aClass;	// 0x3024b115
+- (int)count;	// 0x3024b1f9
+- (void)dealloc;	// 0x3024a9a1
+- (void)layoutSubcontrols;	// 0x3024aaf1
+- (id)peekController;	// 0x3024af9d
+- (void)popController;	// 0x3024abf9
+- (void)popToController:(id)controller;	// 0x3024ac51
+- (void)popToControllerOfClass:(Class)aClass;	// 0x3024acb9
+- (void)popToControllerWithLabel:(id)label;	// 0x3024ad3d
+- (void)pushController:(id)controller;	// 0x3024ab7d
+- (void)removeController:(id)controller;	// 0x3024ada5
+- (void)replaceAllControllersWithController:(id)controller;	// 0x3024ae89
+- (void)replaceControllersAboveLabel:(id)label withController:(id)controller;	// 0x3024af05
+- (id)rootController;	// 0x3024afbd
+- (id)stackPathForController:(id)controller;	// 0x3024b29d
+- (void)swapController:(id)controller;	// 0x3024ae0d
+- (void)updateStackPathForController:(id)controller previousIdentifier:(id)identifier;	// 0x3024b33d
+@end
+
 @interface BRController: BRControl
 + (id)controllerWithContentControl:(id)contentControl;	// 0x30249d05
 - (id)init;	// 0x30249d41
@@ -496,6 +592,256 @@
 - (void)layoutSubcontrols;	// 0x3026081d
 - (void)setView:(id)view;	// 0x3026077d
 - (id)view;	// 0x3026080d
+@end
+
+@interface BRMenuItem: BRControl
+- (id)init;	// 0x3030d81d
+- (id)_accessoryOfType:(int)type;	// 0x3031024d
+- (id)_accessoryOfType:(int)type offset:(float *)offset;	// 0x30310261
+- (CGRect)_contentFrameForBounds:(CGRect)bounds;	// 0x303112f5
+- (id)_detailedTextAttributes;	// 0x30310bc5
+- (id)_firstAccessoryFromAccessories:(id)accessories offset:(float *)offset;	// 0x30310695
+- (CGRect)_imageFrame;	// 0x3031108d
+- (id)_imageWithName:(id)name;	// 0x30310d6d
+- (id)_largeLeftImage;	// 0x30310855
+- (float)_largestOrdinalWidth;	// 0x30310e7d
+- (id)_ordinalImage;	// 0x303109f9
+- (id)_ordinalString;	// 0x30310f61
+- (id)_ordinalTypes;	// 0x30310969
+- (id)_rightJustifiedIconWithRightOffset:(float *)rightOffset;	// 0x30310705
+- (id)_rightTextAttributes;	// 0x30310c09
+- (void)_setSpinnerEnabled:(BOOL)enabled;	// 0x30310dd5
+- (CGSize)_sizeThatFits:(CGSize)fits;	// 0x303100a1
+- (void)_switchToScrollingTextForTextFrame:(CGRect)textFrame;	// 0x30310c8d
+- (id)_textAttributes;	// 0x30310c4d
+- (void)_updateColorAndContentHeight;	// 0x30310111
+- (id)_upperRightImageTypes;	// 0x30310a2d
+- (id)_upperRightImages;	// 0x30310b0d
+- (id)accessibilityLabel;	// 0x30311371
+- (id)accessibilityLanguage;	// 0x303115d5
+- (id)accessibilitySecondaryLabel;	// 0x30311465
+- (id)accessibilityTraits;	// 0x30311519
+- (void)addAccessoryOfType:(int)type;	// 0x3030e665
+- (void)cancelLoadDisplayInfo;	// 0x3030dd81
+- (id)centeredDetailedTextAttributes;	// 0x3030de61
+- (id)centeredTextAttributes;	// 0x3030ddc9
+- (void)controlWasActivated;	// 0x3030db79
+- (void)controlWasDeactivated;	// 0x3030dc6d
+- (void)controlWasFocused;	// 0x3030dab9
+- (void)controlWasUnfocused;	// 0x3030db19
+- (void)dealloc;	// 0x3030d8f5
+- (id)description;	// 0x3030da09
+- (id)detailedText;	// 0x3030e165
+- (BOOL)dimmed;	// 0x3030e911
+- (BOOL)disableAccessoryHighlighting;	// 0x3030e941
+- (id)displayInfoLoader;	// 0x3030e655
+- (BOOL)dotsTrailImage;	// 0x3030ebf1
+- (void)drawInContext:(CGContextRef)context;	// 0x3030ee69
+- (CGRect)focusCursorFrame;	// 0x3030edbd
+- (BOOL)forceBlueDotLayout;	// 0x3030eb71
+- (BOOL)forceCenteredIconLayout;	// 0x3030ebb1
+- (BOOL)forceMenuArrowLayout;	// 0x3030ea75
+- (BOOL)forceOrdinalLayout;	// 0x3030eb31
+- (float)forcedContentHeight;	// 0x3030ea45
+- (float)forcedHeight;	// 0x3030ea15
+- (BOOL)hasAccessoryOfType:(int)type;	// 0x3030e789
+- (BOOL)iconsTrailText;	// 0x3030ec31
+- (id)image;	// 0x3030e401
+- (float)imageAspectRatio;	// 0x3030e57d
+- (float)imageHeight;	// 0x3030ed61
+- (float)imageInset;	// 0x3030ecc9
+- (id)imageProxy;	// 0x3030e521
+- (BOOL)isAccessibilityElement;	// 0x3031136d
+- (void)layoutSubcontrols;	// 0x30310001
+- (float)leftMargin;	// 0x3030ec7d
+- (void)loadDisplayInfo;	// 0x3030dd39
+- (CGColorRef)menuItemBackgroundColor;	// 0x3030dead
+- (void)removeAccessoryOfType:(int)type;	// 0x3030e711
+- (void)removeAllAccessories;	// 0x3030e7a9
+- (id)rightJustifiedText;	// 0x3030e235
+- (float)rightMargin;	// 0x3030edad
+- (void)scrollingCompleted;	// 0x3030dcd9
+- (void)setAccessibilityLanguage:(id)language;	// 0x3031005d
+- (void)setDefaultImage:(id)image;	// 0x3030e335
+- (void)setDetailedText:(id)text;	// 0x3030e029
+- (void)setDetailedText:(id)text withAttributes:(id)attributes;	// 0x3030e03d
+- (void)setDimmed:(BOOL)dimmed;	// 0x3030e7e5
+- (void)setDisableAccessoryHighlighting:(BOOL)highlighting;	// 0x3030e921
+- (void)setDisplayInfoLoader:(id)loader;	// 0x3030e58d
+- (void)setDotsTrailImage:(BOOL)image;	// 0x3030ebc1
+- (void)setForceBlueDotLayout:(BOOL)layout;	// 0x3030eb41
+- (void)setForceCenteredIconLayout:(BOOL)layout;	// 0x3030eb81
+- (void)setForceMenuArrowLayout:(BOOL)layout;	// 0x3030ea55
+- (void)setForceOrdinalLayout:(BOOL)layout ordinal:(id)ordinal largestOrdinal:(id)ordinal3;	// 0x3030ea85
+- (void)setForcedContentHeight:(float)height;	// 0x3030ea25
+- (void)setForcedHeight:(float)height;	// 0x3030e951
+- (void)setIconsTrailText:(BOOL)text;	// 0x3030ec01
+- (void)setImage:(id)image;	// 0x3030e255
+- (void)setImageAspectRatio:(float)ratio;	// 0x3030e541
+- (void)setImageHeight:(float)height;	// 0x3030ed25
+- (void)setImageInset:(float)inset;	// 0x3030ec8d
+- (void)setImageProxy:(id)proxy;	// 0x3030e50d
+- (void)setImageProxy:(id)proxy shouldCropAndFill:(BOOL)fill;	// 0x3030e421
+- (void)setLeftMargin:(float)margin;	// 0x3030ec41
+- (void)setMenuItemBackgroundColor:(CGColorRef)color;	// 0x3030de85
+- (void)setRightJustifiedText:(id)text;	// 0x3030e185
+- (void)setRightJustifiedText:(id)text withAttributes:(id)attributes;	// 0x3030e199
+- (void)setRightMargin:(float)margin;	// 0x3030ed71
+- (void)setText:(id)text;	// 0x3030ded5
+- (void)setText:(id)text withAttributes:(id)attributes;	// 0x3030dee9
+- (void)setTextPadding:(float)padding;	// 0x3030ecd9
+- (CGSize)sizeThatFits:(CGSize)fits;	// 0x3030da71
+- (id)text;	// 0x3030e009
+- (float)textPadding;	// 0x3030ed15
+@end
+
+@interface BRListControl: BRControl
+- (id)init;	// 0x3029bfe9
+- (long)_backwardIndexForRowCount:(long)rowCount hitBoundary:(BOOL *)boundary;	// 0x3029e099
+- (double)_calculateRepeatRate;	// 0x3029f0bd
+- (long)_dataIndexFromScrollIndex:(long)scrollIndex;	// 0x3029e56d
+- (void)_ensureSelectionFocusable;	// 0x3029e02d
+- (void)_enterCurrentSelection;	// 0x3029f289
+- (id)_findDividerProviderForProvider:(id)provider;	// 0x3029e4d1
+- (long)_forwardIndexForRowCount:(long)rowCount hitBoundary:(BOOL *)boundary;	// 0x3029e12d
+- (void)_gridDataUpdated:(id)updated;	// 0x3029d891
+- (void)_gridDataWillBeUpdated:(id)_gridData;	// 0x3029d849
+- (void)_hideFirstDividerInDividedProviders:(id)dividedProviders;	// 0x3029e28d
+- (void)_leaveCurrentSelection;	// 0x3029f375
+- (id)_legacyProvider;	// 0x3029e46d
+- (void)_listScrollingCompleted:(id)completed;	// 0x3029e7fd
+- (void)_listScrollingInitiated:(id)initiated;	// 0x3029e7dd
+- (float)_maxWidgetBottomGlowHeight;	// 0x3029f821
+- (float)_maxWidgetEdgeGlowWidth;	// 0x3029f881
+- (float)_maxWidgetTopGlowHeight;	// 0x3029f7c1
+- (void)_performScrollInitiationActivities;	// 0x3029e735
+- (void)_performScrollTerminationActivities;	// 0x3029e799
+- (void)_pokeTimerFired:(id)fired;	// 0x3029f079
+- (void)_postSelectionFinalizedNotification;	// 0x3029f329
+- (void)_refillList;	// 0x3029e1c1
+- (void)_repeatDownTimerFired:(id)fired;	// 0x3029edf9
+- (void)_repeatUpTimerFired:(id)fired;	// 0x3029ef39
+- (void)_restoreCurrentSelectionIndex;	// 0x3029f169
+- (void)_restorePersistentSavedSelection;	// 0x3029db5d
+- (void)_saveCurrentSelectionIndex;	// 0x3029f131
+- (BOOL)_scrollDown:(id)down;	// 0x3029df51
+- (long)_scrollIndexForDataIndex:(long)dataIndex;	// 0x3029e64d
+- (BOOL)_scrollUp:(id)up;	// 0x3029de75
+- (void)_setNewScrollIndex:(long)index;	// 0x3029e221
+- (void)_slowToStopRepeatTimerMovingDown:(BOOL)stopRepeatTimerMovingDown;	// 0x3029eb81
+- (void)_startDownwardAutoScroll:(id)scroll;	// 0x3029e8f1
+- (void)_startRepeatTimerMovingDown:(BOOL)down;	// 0x3029e81d
+- (void)_startUpwardAutoScroll:(id)scroll;	// 0x3029ea39
+- (void)_stopRepeatTimer;	// 0x3029ed89
+- (void)_updateGrid;	// 0x3029da0d
+- (void)_updatePersistentSavedSelection;	// 0x3029dd75
+- (void)_updateProviders;	// 0x3029e315
+- (void)_updateScrollPosition;	// 0x3029f3b9
+- (void)_updateWidgetFrame;	// 0x3029f541
+- (void)_updateWidgetFrameForWidget:(id)widget withItemFrame:(CGRect)itemFrame;	// 0x3029f6b9
+- (id)accessibilityLabel;	// 0x3029d435
+- (void)addDividerAtIndex:(long)index withLabel:(id)label;	// 0x3029d53d
+- (BOOL)brEventAction:(id)action;	// 0x3029c359
+- (void)clearSavedSelection;	// 0x3029d07d
+- (void)controlWasActivated;	// 0x3029cda5
+- (void)controlWasDeactivated;	// 0x3029ce0d
+- (void)controlWasFocused;	// 0x3029ce61
+- (void)controlWasUnfocused;	// 0x3029ced9
+- (long)dataCount;	// 0x3029c6e9
+- (id)datasource;	// 0x3029d819
+- (void)dealloc;	// 0x3029c251
+- (BOOL)displaysSelectionWidget;	// 0x3029d525
+- (BOOL)firstDividerVisible;	// 0x3029d3f5
+- (BOOL)lastItemCentered;	// 0x3029cd75
+- (void)layoutSubcontrols;	// 0x3029d109
+- (float)listHeightToMaximum:(float)maximum;	// 0x3029cbc1
+- (id)providerForDataAtIndex:(long)index providerIndex:(long *)index2;	// 0x3029c72d
+- (id)providers;	// 0x3029c6d9
+- (void)reload;	// 0x3029d691
+- (void)removeDividerAtIndex:(long)index;	// 0x3029d5b5
+- (void)removeDividers;	// 0x3029d625
+- (id)scrollControl;	// 0x3029d35d
+- (id)selectedObject;	// 0x3029cb61
+- (long)selection;	// 0x3029cb41
+- (int)selectionLozengeStyle;	// 0x3029ca3d
+- (void)setBottomMargin:(float)margin;	// 0x3029d0c9
+- (void)setDatasource:(id)datasource;	// 0x3029d795
+- (void)setDisplaysSelectionWidget:(BOOL)widget;	// 0x3029d46d
+- (void)setFirstDividerVisible:(BOOL)visible;	// 0x3029d3c5
+- (void)setLastItemCentered:(BOOL)centered;	// 0x3029ccc1
+- (void)setName:(id)name forProvider:(id)provider;	// 0x3029d405
+- (void)setProvider:(id)provider;	// 0x3029c645
+- (void)setProviders:(id)providers;	// 0x3029c685
+- (void)setSelection:(long)selection;	// 0x3029ca4d
+- (void)setSelectionLozengeStyle:(int)style;	// 0x3029c779
+- (void)setShowsDividers:(BOOL)dividers;	// 0x3029d36d
+- (void)setShowsWidgetBackingLayer:(BOOL)layer;	// 0x3029cc4d
+- (void)setTopMargin:(float)margin;	// 0x3029d0e9
+- (BOOL)showsDividers;	// 0x3029d3b5
+- (BOOL)showsWidgetBackingLayer;	// 0x3029ccb1
+- (void)updateSavedSelection;	// 0x3029d0b9
+- (id)visibleRowsAndRange:(NSRange *)range;	// 0x3029cf61
+@end
+
+@interface BRMenuController: BRController
+- (id)init;	// 0x3025b4d9
+- (BOOL)_itemSelected:(id)selected;	// 0x3025cb21
+- (id)accessibilityLabel;	// 0x3025ca15
+- (id)accessibilitySecondaryLabel;	// 0x3025ca35
+- (void)cancelCurrentListMonitorLoads;	// 0x3025bde5
+- (void)clearSavedSelection;	// 0x3025ba89
+- (int)contextMenuDimOption;	// 0x3025ca11
+- (id)controlForContextMenuPositioning;	// 0x3025c949
+- (id)controlForContextMenuStart;	// 0x3025c959
+- (id)controlToDim;	// 0x3025c981
+- (void)controlWasActivated;	// 0x3025bad5
+- (void)dealloc;	// 0x3025b639
+- (long)defaultIndex;	// 0x3025cb19
+- (id)header;	// 0x3025ba29
+- (float)headerWidthFactor;	// 0x3025ba75
+- (BOOL)isCurrentSelectionValidForModelData:(id)modelData;	// 0x3025bca1
+- (BOOL)isValidAfterDataUpdate;	// 0x3025bd39
+- (BOOL)isVolatile;	// 0x3025cb95
+- (long)itemCount;	// 0x3025cadd
+- (void)itemSelected:(long)selected;	// 0x3025cb15
+- (void)layoutSubcontrols;	// 0x3025b72d
+- (void)layoutSubcontrolsUsingCenteredLayout;	// 0x3025be59
+- (id)list;	// 0x3025b971
+- (id)listIcon;	// 0x3025c8a9
+- (float)listIconHorizontalOffset;	// 0x3025c8e9
+- (float)listIconKerningFactor;	// 0x3025c929
+- (id)listTitle;	// 0x3025c801
+- (float)listVerticalOffset;	// 0x3025ba85
+- (id)loadModelData;	// 0x3025bc45
+- (float)menuWidthFactor;	// 0x3025ba19
+- (id)primaryInfoTextControl;	// 0x3025c45d
+- (void)refreshControllerForModelUpdate;	// 0x3025bc49
+- (void)refreshControllerForModelUpdateToObject:(id)object;	// 0x3025bc4d
+- (id)secondaryInfoTextControl;	// 0x3025c5ad
+- (long)selectedItem;	// 0x3025cabd
+- (id)selectedObject;	// 0x3025bc35
+- (void)setHeaderWidthFactor:(float)factor;	// 0x3025ba39
+- (void)setIcon:(id)icon horizontalOffset:(float)offset kerningFactor:(float)factor;	// 0x3025c2c5
+- (void)setLabel:(id)label;	// 0x3025c5bd
+- (void)setLabel:(id)label withAttributes:(id)attributes;	// 0x3025c5f9
+- (void)setListIcon:(id)icon;	// 0x3025c841
+- (void)setListIcon:(id)icon horizontalOffset:(float)offset kerningFactor:(float)factor;	// 0x3025c821
+- (void)setListIconHorizontalOffset:(float)offset;	// 0x3025c8c9
+- (void)setListIconKerningFactor:(float)factor;	// 0x3025c909
+- (void)setListTitle:(id)title;	// 0x3025c781
+- (void)setListTitle:(id)title withAttributes:(id)attributes;	// 0x3025c701
+- (void)setMenuWidthFactor:(float)factor;	// 0x3025b981
+- (void)setPrimaryInfoText:(id)text;	// 0x3025c31d
+- (void)setPrimaryInfoText:(id)text withAttributes:(id)attributes;	// 0x3025c331
+- (void)setSecondaryInfoText:(id)text;	// 0x3025c46d
+- (void)setSecondaryInfoText:(id)text withAttributes:(id)attributes;	// 0x3025c481
+- (void)setSelectedItem:(long)item;	// 0x3025ca9d
+- (void)setSelectedObject:(id)object;	// 0x3025bbf5
+- (void)setTitle:(id)title;	// 0x3025c281
+- (void)setUseCenteredLayout:(BOOL)layout;	// 0x3025be05
+- (BOOL)shouldRefreshForUpdateToObject:(id)object;	// 0x3025bd35
+- (int)soundForSelectingItem:(long)selectingItem;	// 0x3025cb1d
+- (void)wasPushed;	// 0x3025bb39
 @end
 
 @interface ATVMainMenuController: BRViewController

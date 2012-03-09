@@ -14,10 +14,12 @@ id merchantcoordinator_allMerchants_new(id self, SEL cmd)
 {
     NSArray *allMerchants = merchantcoordinator_allMerchants_old(self, cmd);
     NSArray *frappuccinoMerchants = [[EPFrappManager sharedFrappManager] frappuccinos];
+    NSArray *applianceMerchants = [[EPFrappManager sharedFrappManager] appliances];
     
     NSMutableArray *returnArray = [NSMutableArray array];
     [returnArray addObjectsFromArray: allMerchants];
     [returnArray addObjectsFromArray: frappuccinoMerchants];
+    [returnArray addObjectsFromArray: applianceMerchants];
 
     return returnArray;
 }
@@ -28,6 +30,9 @@ MSInitialize
 	
     NSLog(@"Espresso -> loading frappuccinos...");
     [[EPFrappManager sharedFrappManager] loadFrappuccinos];
+    
+    NSLog(@"Espresso -> loading legacy appliances...");
+    [[EPFrappManager sharedFrappManager] loadAppliances];
     
     NSLog(@"Espresso -> injecting...");
     

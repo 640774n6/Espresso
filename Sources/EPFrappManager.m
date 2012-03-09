@@ -8,6 +8,7 @@
 
 #import "EPFrappManager.h"
 #import "EPFrappMerchant.h"
+#import "EPFrappLegacyMerchant.h"
 
 @implementation EPFrappManager
 
@@ -20,7 +21,9 @@
     if((self = [super init]))
     {
         _frappuccinos = [[NSMutableArray alloc] init];
+        _appliances = [[NSMutableArray alloc] init];
         _frappuccinosLoaded = NO;
+        _appliancesLoaded = NO;
     }
     return self;
 }
@@ -28,6 +31,7 @@
 - (void) dealloc
 {
     [_frappuccinos release];
+    [_appliances release];
     [super dealloc];
 }
 
@@ -103,6 +107,50 @@
     _frappuccinosLoaded = YES;
 }
 
+- (void) _loadAppliances
+{    
+    NSString *appleTVPath = [[NSBundle mainBundle] bundlePath];
+	NSString *frappPath = [appleTVPath stringByAppendingPathComponent: @"Appliances"];
+	NSDirectoryEnumerator *iterator = [[NSFileManager defaultManager] enumeratorAtPath: frappPath];
+	
+    NSString *filePath = nil;
+	while((filePath = [iterator nextObject]))
+    {
+        if([[filePath pathExtension] isEqualToString: @"frappliance"]) 
+		{
+			NSBundle *frappBundle = [NSBundle bundleWithPath: [frappPath stringByAppendingPathComponent: filePath]];
+			NSLog(@"EPFrappManager -> attempting to load legacy %@...", [filePath lastPathComponent]);
+            
+            if([frappBundle load])
+            {
+                Class frappClass = [frappBundle principalClass];
+                NSDictionary *frappBundleInfoDict = [frappBundle infoDictionary];
+                
+                EPFrappLegacyMerchant *frappMerchant = [EPFrappLegacyMerchant merchant];
+                [frappMerchant setLegacyApplianceClass: frappClass];
+                
+                NSString *title = [[frappBundle localizedInfoDictionary] objectForKey: (NSString *)kCFBundleNameKey];
+                { [frappMerchant setTitle: title]; }
+                
+                NSString *identifier = [frappBundleInfoDict objectForKey: (NSString *)kCFBundleIdentifierKey];
+                if(identifier)
+                { [frappMerchant setIdentifier: identifier]; }
+                
+                NSNumber *preferredOrder = [frappBundleInfoDict objectForKey: @"FRAppliancePreferedOrderValue"];
+                if(preferredOrder)
+                { [frappMerchant setPreferredOrder: [preferredOrder floatValue]]; }
+                
+                [_appliances addObject: frappMerchant];
+                NSLog(@"EPFrappManager -> loaded legacy %@", NSStringFromClass(frappClass));
+            }
+            else
+            { NSLog(@"EPFrappManager -> failed to load legacy %@", [filePath lastPathComponent]); }
+		}
+    }
+    _appliancesLoaded = YES;
+}
+
+
 #pragma mark -
 #pragma mark Public Methods
 #pragma mark
@@ -129,6 +177,30 @@
 {
     if(!_frappuccinosLoaded)
     { [self _loadFrappuccinos]; }
+}
+
+- (NSArray *) appliances
+{ return _appliances; }
+
+- (BOOL) appliancesLoaded
+{ return _appliancesLoaded; }
+
+- (void) clearAppliances
+{
+    [_appliances removeAllObjects];
+    _appliancesLoaded = NO;
+}
+
+- (void) reloadAppliances
+{
+    [self clearAppliances];
+    [self _loadAppliances];
+}
+
+- (void) loadAppliances
+{
+    if(!_appliancesLoaded)
+    { [self _loadAppliances]; }
 }
 
 @end
